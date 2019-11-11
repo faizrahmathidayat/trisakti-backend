@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css" media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .image--cover {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center right;
+      margin: -3px;
+    }
+
+    table{
+      text-align: left;
+      font-family: sans-serif;
+      background-color: white;
+      margin: 20px auto 0px auto;
+      width: 70%;
+    }
+    table thead td{
+      padding:20px;
+    }
+    table tbody td{
+      padding:0px 20px 5px 20px;
+    }
+
+    table tfoot{
+      background-color: #f4f4f4;
+    }
+    button#btn:hover{
+      background-color: #069f55 !important;
+    }
+    #footer{
+      margin-top:0px;
+      background-color: #efefef;
+      border-top: 1px solid red;
+
+    }
+    button#btn{
+      cursor: pointer !important;
+      -moz-cursor: pointer !important;
+      -webkit-cursor: pointer !important;
+    }
+
+
+    @media screen and (max-width: 700px) {
+      table {
+        border-spacing: none;
+        border-collapse: collapse;
+        margin: 20px auto 0px;
+        background-color: white;
+        width: 100%;
+      }
+      img{
+        width: 70%;
+      }
+      #footer{
+        margin-top: 0px;
+        background-color: #efefef;
+        border-top: 1px solid red;
+      }
+      tbody #small{
+        font-size : 16px !important;
+      }
+
+    }
+    @media screen and (max-width: 320px) {
+      table {
+        border-spacing: none;
+        border-collapse: collapse;
+        margin: 20px auto 0px;
+        background-color: white;
+        width: 100%;
+      }
+      img{
+        width: 50%;
+      }
+      #footer{
+        margin-top: 0px;
+        background-color: #efefef;
+        border-top: 1px solid red;
+      }
+      tbody #small{
+        font-size : 14px !important;
+      }
+      tbody tr td{
+        font-size : 11px !important;
+      }
+      #btn{
+        font-size : 13px !important;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <table width="100%" border="0" style="border-collapse:collapse; border-top:1px solid gray; border-right:1px solid gray; border-left:1px solid gray;">
+    <thead>
+      <tr>
+        <td colspan="3" style=" vertical-align: top; width: 100%;" align="left">
+          <a href="{SITEURL}" target="output"><img src="{SITEURL}images/youbid_logo.png" ></a>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3" style="">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Click <a href="{URL_UNSUBSCRIBE}">Here</a> to Unsubscribe.</td>
+      </tr>
+      <tr>
+        <td colspan="3" id="small" style="font-size: 20px; letter-spacing: 0.4px; font-weight: 550;">Terdapat pertanyaan baru pada auction anda!</td>
+      </tr>
+      <tr>
+        <td colspan="3" style="font-size: 14px;"><span style=" vertical-align: top;"><p>Online Platform for Auction and Fundraising</p></span></td>
+      </tr>
+      <tr>
+        <td colspan="3" style="">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" style="">&nbsp;</td>
+      </tr>
+      <!-- <tr>
+        <td colspan="3" style=" letter-spacing: 0.4px;font-size:17px; color:#ff1212; font-weight:bold">Hello {PENJUAL},</td>
+      </tr> -->
+      <!-- <tr>
+        <td colspan="2" style="font-size: 14px; text-align: justify; letter-spacing:0.4px;">
+          <img src="{SITEURL}{v_foto_profil}" style="width: 40px;height: 40px;margin: 0 2px 0 2px;"  class="image--cover" align="center">
+          {PENANYA}
+        </td>
+      </tr> -->
+      <tr>
+        <td colspan="3" style="font-size: 14px; text-align: justify; letter-spacing:0.4px;"><p>{PERTANYAAN}</p></td>
+      </tr>
+      <tr>
+        <td colspan="3" style="font-size: 14px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" style="font-size: 14px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align: center;">
+          <a href="{CONFIRMURL}" target="output">
+            <button id="btn" type="button" style="color: #f4f4f4; background-color: #289c30; border: none; padding: 1%; text-decoration: none; border-radius: 5px; text-align: center; font-size: 15px; font-weight: 500; width: 45%; height:50px; cursor: pointer;">
+              Lihat Diskusi
+            </button>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="font-size: 14px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" style="font-size: 14px;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+    <table id="footer" style="border-collapse:collapse" border="0">
+      <tr>
+        <td colspan="3" style="font-size: 14px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding:0px 20px 10px 20px;font-size:14px;"><p>Pesan ini telah dikirim oleh Youb.id ke {{varname}}.</p></td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding:0px 20px;font-size:14px;"><p>Untuk informasi lebih lanjut silahkan hubungi layanan pelanggan kami (cs@youb.id)</p></td>
+      </tr>
+      <tr>
+        <td colspan="3" style="font-size: 14px;">&nbsp;</td>
+      </tr>
+    </table>
+
+</body>
+</html>

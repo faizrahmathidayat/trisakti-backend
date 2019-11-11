@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=trisakti
+POSTGRES_USER=JehwCGGRIfDiEjabRdmVzezZyQgGrpQM
+POSTGRES_PASSWORD=64Sl37bFE02ZwfyvbLtsmmgJPZBnSQD9fc9txuTFcIFhX0YakpnTuuH37VZi3wS3

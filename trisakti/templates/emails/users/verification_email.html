@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Verification Email</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+	<style  media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
+			color: #333333;
+			box-sizing: border-box;
+		}
+		.container {
+			max-width: 580px;
+			width: 450px;
+			min-height: 100px;
+			background-color: #FFF;
+			margin: 1em auto;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			-moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+		}
+		.header {
+			text-align: center;
+			padding: 2em 1.5em;
+			background-color: #77CCFD;
+		}
+		.header h2 {
+			font-weight: 300;
+			color: #FFFFFF;
+			margin-top: 1em;
+		}
+		.body {
+			padding: 1em 4em;
+			width: 100%;
+		}
+		.body .title {
+			font-size: 28px;
+			font-weight: 18px;
+			color: #555;
+			font-weight: 300;
+			text-align: center;
+		}
+		.body .text {
+			margin-top: 2em;
+			margin-bottom: 2em;
+			line-height: 24px;
+			color: #5E5E5E;
+			text-align: center;
+		}
+		.body .btn {
+			display: block;
+			cursor: pointer;
+			text-decoration: none;
+			padding: 9px 22px;
+			border-radius: 4px;
+			background-color: orange;
+			color: #FFFFFF;
+			width: 200px;
+			margin: auto;
+			justify-content: center;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23);
+			-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+			-moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+			transition: 0.3s;
+		}
+		.body .btn:hover {
+			background-color: #F39E02;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			-moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			transition: 0.3s;
+		}
+		.body .help-text {
+			font-size: 14px;
+			color: #999;
+			line-height: 23px;
+			text-align: center;
+		}
+		.link {
+			text-align: center;
+			margin-top: 5px;
+			margin-bottom: 20px;
+		}
+		.link-a {
+			color: #0090FF;
+			font-size: 14px;
+		}
+
+		.footer {
+			background-color: #F2FEFF;
+			padding: 1em 2em;
+			text-align: center;
+		}
+		.footer .need-help {
+			font-weight: bold;
+			font-size: 20px;
+			text-align: center;
+			color: #555;
+		}
+		.footer .send-info {
+			color: #5E5E5E;
+			line-height: 22px;
+			margin-top: 20px;
+			font-size: 14px;
+		}
+
+		@media only screen and (max-width: 450px) {
+			.container {
+				max-width: 100%;
+				width: 100%;
+				min-height: 100px;
+				background-color: #FFF;
+				margin: 0;
+				box-shadow: none;
+			}
+			.body {
+				padding: 1em 1.5em;
+				width: 100%;
+			}		
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<img src="{{ base_url }}" alt="" width="64px" height="64px" />
+		</div>
+		<div class="body">
+			<p class="title">Verification Email</p>
+			<p class="text">
+				Hey {{ user }}, you're almost done to start Trisakti Connect. Simply click big button yellow to verify your email address.
+			</p>
+			<p style="margin-top: 25px; margin-bottom: 25px;">
+				<a href="{{ url }}" class="btn" target="_blank">
+					Verify Email Address
+				</a> 
+			</p>
+			<p class="help-text">If that doesn't work, copy and paste the following link in your browser:</p>
+			<p class="link"><a class="link-a" href="{{ url }}" target="_blank">{{ url }}</a></p>
+		</div>
+		<div class="footer">
+			<p class="need-help">Need Help?</p>
+			<p class="send-info">Please send feedback or bug info <br>
+				to: <a class="link-a" href="mailto:galih@inarts.co.id">galih@inarts.co.id</a></p>
+		</div>
+	</div>
+</body>
+</html>

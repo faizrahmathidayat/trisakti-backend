@@ -1,0 +1,5 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+DATABASE_URL=postgres://JehwCGGRIfDiEjabRdmVzezZyQgGrpQM:64Sl37bFE02ZwfyvbLtsmmgJPZBnSQD9fc9txuTFcIFhX0YakpnTuuH37VZi3wS3@postgres:5432/trisakti
